@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-lq82z919pkrn^1qgv^oc(&w_3=3o!#6@wk!f#u&%ckk8ja(wr3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'youtubefav',  
+    'captcha',
+    'youtubefav', 
+     
 ]
 
 MIDDLEWARE = [
@@ -115,7 +118,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+LOGIN_URL = '/login/'
+
+AUTH_USER_MODEL = 'youtubefav.User'
+
+RECAPTCHA_PUBLIC_KEY = '6Lc97m4rAAAAABs7oiFU7yaw5TLPCls7hrYE9AFr'
+RECAPTCHA_PRIVATE_KEY = '6Lc97m4rAAAAAHmWSlnLmwwFukpZp7nbVEpCsVC_'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

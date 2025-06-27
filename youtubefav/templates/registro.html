@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'youtubefav/registro.css' %}">
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="registro-container">
+        <h1>Registro</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" id="name" name="name" placeholder="Ingrese su Nombre " required>
+            <br>
+            <input type="text" id="lastname" name="lastname" placeholder="Ingrese su Apellido" required>
+            <br>
+            <input type="text" id="username" name="username" placeholder="Ingrese su Usuario" required>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Ingrese su Correo Electronico" required>
+            <br>
+            <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required>
+            <br>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirme su contraseña" required>
+            <div class="g-recaptcha" data-sitekey="6Lc97m4rAAAAABs7oiFU7yaw5TLPCls7hrYE9AFr"></div>
+            <div class="contenedor-bton">
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>
