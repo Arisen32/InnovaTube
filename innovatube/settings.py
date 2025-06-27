@@ -126,6 +126,8 @@ AUTH_USER_MODEL = 'youtubefav.User'
 RECAPTCHA_PUBLIC_KEY = '6Lc97m4rAAAAABs7oiFU7yaw5TLPCls7hrYE9AFr'
 RECAPTCHA_PRIVATE_KEY = '6Lc97m4rAAAAAHmWSlnLmwwFukpZp7nbVEpCsVC_'
 
+YOUTUBE_API_KEY = 'AIzaSyD4SqlhSNmSj9BmtUc7gA-D-HQPJ2t-ZEw'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
