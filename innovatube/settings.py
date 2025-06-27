@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-lq82z919pkrn^1qgv^oc(&w_3=3o!#6@wk!f#u&%ckk8ja(wr3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','innovatube-fwd9.onrender.com']
 
